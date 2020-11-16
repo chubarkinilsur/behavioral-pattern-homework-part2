@@ -6,7 +6,7 @@ public class Main {
         CopyClient client = new CopyClient();
         client.setXerox(xerox);
         client.justDoIt();
-        for (int i =0; i<10;i++){
+        for (int i =0; i<5;i++){
             client.nextActivity();
             client.justDoIt();
     }

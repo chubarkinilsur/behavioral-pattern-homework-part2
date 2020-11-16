@@ -8,17 +8,26 @@ public class CopyClient {
     }
 
     void nextActivity() {
-        if (xerox instanceof GiveMeMoney)
+        if (xerox instanceof GiveMeMoney) {
             setXerox(new SelectSourceState());
-        if (xerox instanceof SelectSourceState)
+            return;
+        }
+        if (xerox instanceof SelectSourceState) {
             setXerox(new SelectDocumentState());
-        if (xerox instanceof SelectDocumentState)
+            return;
+        }
+        if (xerox instanceof SelectDocumentState) {
             setXerox(new PrintDocumentState());
-        if (xerox instanceof PrintDocumentState)
+            return;
+        }
+        if (xerox instanceof PrintDocumentState) {
             setXerox(new GiveMeCashState());
+            return;
+        }
     }
-  public   void justDoIt() {
-      xerox.justDoIt();
-  }
+
+    public void justDoIt() {
+        xerox.justDoIt();
+    }
 
 }

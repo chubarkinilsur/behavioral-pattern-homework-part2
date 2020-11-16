@@ -5,4 +5,7 @@ public class PrintDocumentState implements Xerox {
     public void justDoIt() {
         System.out.println("Print document");
     }
+    void printAnotherDocument(){
+
+    }
 }
